@@ -8,8 +8,15 @@
       rel="stylesheet"
     />
 
-    <NavBar/>
-    <Header/>
+    <div class="header h-screen">
+      <NavBar/>
+      <Header/>
+    </div>
+
+    <main>
+      <Features/>
+      <ProductsView/>
+    </main>
 
   </div>
 
@@ -17,8 +24,15 @@
 
 <script>
 import NavBar from "~/components/Nav";
+import ProductsView from "~/components/Products";
 export default {
   name: 'HomeView',
-  components: {NavBar},
+  components: {ProductsView, NavBar},
 }
 </script>
+
+<style>
+.header {
+  background: url(~/static/hero-bg.png) no-repeat;
+}
+</style>
